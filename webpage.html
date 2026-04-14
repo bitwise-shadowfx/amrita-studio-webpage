@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Amrita Mazumdar | Luxury Makeup Artist in Asansol</title>
+    <meta name="description"
+        content="Amrita Mazumdar – Luxury bridal, party and event makeup artist based in Asansol, West Bengal. Book your appointment today.">
+    <meta name="keywords"
+        content="makeup artist Asansol, bridal makeup Asansol, luxury makeup artist West Bengal, wedding makeup, party makeup Asansol">
+    <meta name="author" content="Amrita Mazumdar">
+
+    <!-- Open Graph / Facebook / WhatsApp preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Amrita Mazumdar | Luxury Makeup Artist in Asansol">
+    <meta property="og:description"
+        content="Luxury bridal, party and event makeup in Asansol, West Bengal. Book your appointment today.">
+    <meta property="og:image" content="images/bridal1.jpeg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Amrita Mazumdar | Luxury Makeup Artist in Asansol">
+    <meta name="twitter:description" content="Luxury bridal, party and event makeup in Asansol, West Bengal.">
+    <meta name="twitter:image" content="images/bridal1.jpeg">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ── RESET ── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fafafa;
+            color: #333;
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: white;
+            padding: 25px;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 2.6rem;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: black;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to right, #ffffff, #ececec);
+            padding: 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .hero .btn-primary {
+            margin-top: 25px;
+            padding: 15px 35px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .hero .btn-primary:hover {
+            background: #333;
+        }
+
+        /* ── SECTION ── */
+        .content-section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* ── GALLERY – BENTO GRID (9 items) ── */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 3 rows of 260 px → covers all 9 items comfortably */
+            grid-template-rows: 260px 260px 260px;
+            gap: 16px;
+        }
+
+        /* Row 1 — Item 1: large hero (2 col × 2 row) */
+        .bento-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* Row 1 — Items 2 & 3: single cells beside hero */
+        .bento-item:nth-child(2),
+        .bento-item:nth-child(3) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        /* Row 2 — Items 4 & 5: fill the right of hero's second row */
+        .bento-item:nth-child(4),
+        .bento-item:nth-child(5) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        /* Row 3 — Item 6: wide accent */
+        .bento-item:nth-child(6) {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        /* Row 3 — Items 7, 8, 9 */
+        .bento-item:nth-child(7),
+        .bento-item:nth-child(8),
+        .bento-item:nth-child(9) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .bento-item {
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            position: relative;
+        }
+
+        .bento-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.25) 0%, transparent 50%);
+            border-radius: 16px;
+            opacity: 0;
+            transition: opacity 0.35s;
+        }
+
+        .bento-item:hover::after {
+            opacity: 1;
+        }
+
+        .bento-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .bento-item:hover img {
+            transform: scale(1.07);
+        }
+
+        /* Tablet: 2-column grid */
+        @media (max-width: 900px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+
+            .bento-item:nth-child(1),
+            .bento-item:nth-child(6) {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            .bento-item:nth-child(2),
+            .bento-item:nth-child(3),
+            .bento-item:nth-child(4),
+            .bento-item:nth-child(5),
+            .bento-item:nth-child(7),
+            .bento-item:nth-child(8),
+            .bento-item:nth-child(9) {
+                grid-column: span 1;
+            }
+
+            .bento-item {
+                height: 220px;
+            }
+        }
+
+        /* Mobile: single column */
+        @media (max-width: 560px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bento-item,
+            .bento-item:nth-child(1),
+            .bento-item:nth-child(6) {
+                grid-column: span 1;
+                height: 240px;
+            }
+        }
+
+        /* ── REVIEWS ── */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .review {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .review h4 {
+            margin-top: 10px;
+        }
+
+        /* ── BOOKING FORM ── */
+        .booking-form {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .booking-form label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-top: 14px;
+            margin-bottom: 4px;
+            color: #444;
+        }
+
+        .booking-form input,
+        .booking-form textarea,
+        .booking-form select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.2s;
+        }
+
+        .booking-form input:focus,
+        .booking-form textarea:focus,
+        .booking-form select:focus {
+            outline: none;
+            border-color: #888;
+        }
+
+        .booking-form .btn-submit {
+            margin-top: 20px;
+            width: 100%;
+            padding: 14px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .booking-form .btn-submit:hover {
+            background: #333;
+        }
+
+        /* ── INSTAGRAM ── */
+        .instagram-block {
+            text-align: center;
+        }
+
+        .instagram-block a {
+            background: black;
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 15px;
+            font-family: 'Poppins', sans-serif;
+            transition: background 0.2s;
+        }
+
+        .instagram-block a:hover {
+            background: #333;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: black;
+            color: #eee;
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            line-height: 2;
+        }
+
+        footer .footer-copy {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* ── WHATSAPP FLOATING BUTTON ── */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 15px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+            z-index: 200;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Amrita Mazumdar</h1>
+        <nav>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#booking">Book</a>
+            <a href="#instagram">Instagram</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>Luxury Makeup Artist in Asansol</h2>
+        <p>Bridal &bull; Party &bull; Event &bull; Glam Makeup</p>
+        <button class="btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+            Book Appointment
+        </button>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="content-section">
+        <h2 class="section-title">Our Work</h2>
+        <div class="bento-grid">
+            <div class="bento-item">
+                <img src="images/bridal1.jpeg" alt="Bridal makeup look 1">
+            </div>
+            <div class="bento-item">
+                <img src="images/bridal2.jpeg" alt="Bridal makeup look 2">
+            </div>
+            <div class="bento-item">
+                <img src="images/bridal3.jpeg" alt="Bridal makeup look 3">
+            </div>
+            <div class="bento-item">
+                <img src="images/bridal4.jpeg" alt="Bridal makeup look 4">
+            </div>
+            <div class="bento-item">
+                <img src="images/bridal5.jpeg" alt="Bridal makeup look 5">
+            </div>
+            <div class="bento-item">
+                <img src="images/bridal6.jpeg" alt="Bridal makeup look 6">
+            </div>
+            <div class="bento-item">
+                <img src="images/bridal7.jpeg" alt="Bridal makeup look 7">
+            </div>
+            <div class="bento-item">
+                <img src="images/bridal8.jpeg" alt="Bridal makeup look 8">
+            </div>
+            <div class="bento-item">
+                <img src="images/bridal9.jpeg" alt="Bridal makeup look 9">
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="content-section">
+        <h2 class="section-title">Client Reviews</h2>
+        <div class="testimonials">
+            <div class="review">
+                <p>"Amazing bridal makeup! I looked stunning on my wedding day."</p>
+                <h4>— Priya Sengupta</h4>
+            </div>
+            <div class="review">
+                <p>"Very professional and beautiful makeup look."</p>
+                <h4>— Riya Gupta</h4>
+            </div>
+            <div class="review">
+                <p>"Best makeup artist in Asansol! Highly recommended."</p>
+                <h4>— Sneha Kumari</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="content-section">
+        <h2 class="section-title">Book Appointment</h2>
+        <form class="booking-form" onsubmit="sendWhatsapp(); return false;">
+
+            <label for="name">Your Name</label>
+            <input id="name" type="text" placeholder="e.g. Priya Sengupta" required>
+
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="tel" placeholder="e.g. 9800000000" required>
+
+            <label for="date">Preferred Date</label>
+            <input id="date" type="date" required>
+
+            <label for="service">Service</label>
+            <select id="service">
+                <option value="Bridal Makeup">Bridal Makeup</option>
+                <option value="Party Makeup">Party Makeup</option>
+                <option value="Event Makeup">Event Makeup</option>
+            </select>
+
+            <label for="msg">Special Request</label>
+            <textarea id="msg" rows="4" placeholder="Any special requests or notes…"></textarea>
+
+            <button type="submit" class="btn-submit">Send Booking via WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section id="instagram" class="content-section instagram-block">
+        <h2 class="section-title">Follow On Instagram</h2>
+        <p>See our latest makeup transformations</p>
+        <a href="https://www.instagram.com/the_house_of_luxury_makeup" target="_blank" rel="noopener noreferrer">Visit
+            Instagram</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>📍 Asansol, West Bengal</p>
+        <p>📞 WhatsApp: +91 7063031855</p>
+        <p class="footer-copy">&copy; <span id="year"></span> Amrita Mazumdar. All rights reserved.</p>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a class="whatsapp-btn" href="https://wa.me/917063031855" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp">💬</a>
+
+    <script>
+        // Auto-update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function sendWhatsapp() {
+            var name = document.getElementById('name').value.trim();
+            var phone = document.getElementById('phone').value.trim();
+            var date = document.getElementById('date').value;
+            var service = document.getElementById('service').value;
+            var msg = document.getElementById('msg').value.trim();
+
+            var text = 'Name: ' + name
+                + '\nPhone: ' + phone
+                + '\nDate: ' + date
+                + '\nService: ' + service
+                + '\nMessage: ' + (msg || 'None');
+
+            var url = 'https://wa.me/917063031855?text=' + encodeURIComponent(text);
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+
+</html>
